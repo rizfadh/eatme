@@ -1,0 +1,76 @@
+@media screen and (min-width: 650px) {
+  .list {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px 20px;
+  }
+  .container {
+    padding: 0 3rem;
+  }
+  .jumbotron img {
+    height: 400px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .list {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px 20px;
+  }
+  .jumbotron img {
+    height: 700px;
+  }
+  .jumbotron h2 {
+    font-size: 4rem;
+  }
+  .fs-2 {
+    font-size: 2rem;
+  }
+  .mt-1 {
+    margin-top: 4rem;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .list {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  #hamburger {
+    display: none;
+  }
+  #drawer {
+    display: flex;
+    position: static;
+    transform: none;
+    width: 40%;
+    font-size: 1rem;
+    visibility: visible;
+  }
+  nav {
+    align-items: center;
+  }
+  nav ul {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    text-decoration: none;
+  }
+  .jumbotron img {
+    min-width: 1000px;
+  }
+  .container {
+    padding: 0 7rem;
+  }
+}
+
+@media screen and (min-width: 1500px) {
+  .list {
+    grid-template-columns: repeat(5, 1fr);
+  }
+  #drawer {
+    width: 30%;
+  }
+  .jumbotron img {
+    height: 900px;
+  }
+}
