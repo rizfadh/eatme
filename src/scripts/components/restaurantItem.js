@@ -14,7 +14,7 @@ class RestaurantItem extends HTMLElement {
           <p class="card-badge"><i class="bx-fw bx bxs-star bx-sm" aria-label="Rating"></i> ${this._restaurant.rating}</p>
           <div class="card-content">
             <p class="card-rating fw-bold"><i class="bx-fw bx bxs-map" aria-label="kota"></i> ${this._restaurant.city}</p>
-            <h3 class="card-header mt-2">${this._restaurant.name}</h3>
+            <h3 class="card-header mt-2" aria-label="restoran ${this._restaurant.name}">${this._restaurant.name}</h3>
           </div>
         </div>
       </a>
