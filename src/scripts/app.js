@@ -13,6 +13,10 @@ export default class App {
   }
 
   _initialAppShell() {
+    document.querySelector('#skipContent').addEventListener('click', () => {
+      document.querySelector('#content').focus();
+    });
+
     DrawerInitiator.init({
       button: this._button,
       drawer: this._drawer,

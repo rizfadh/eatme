@@ -9,8 +9,10 @@ const Detail = {
     return `
     <article>
       <div class="container">
-        <div id="detail" class="mt-1">
-          <h2 class="text-center">Memuat Restoran</h2>
+        <div class="detail mt-1">
+          <div id="restaurants">
+            <h2 class="text-center">Memuat Restoran</h2>
+          </div>
         </div>
         <div id="likeButtonContainer"></div>
       </div>
@@ -29,7 +31,7 @@ const Detail = {
         confirmButtonColor: '#222',
       });
     } else {
-      const restaurantContainer = document.querySelector('#detail');
+      const restaurantContainer = document.querySelector('#restaurants');
       const restaurantDetail = document.createElement('restaurant-detail');
       restaurantDetail.restaurant = restaurant;
       restaurantContainer.innerHTML = '';

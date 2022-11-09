@@ -17,7 +17,7 @@
 <body>
   <header>
     <nav>
-      <a href="#content" class="skip">Skip To Content</a>
+      <button id="skipContent" class="skip">Skip To Content</button>
       <div id="brand">
         <h1 class="logo">EatMe</h1>
       </div>
@@ -38,7 +38,7 @@
     </nav>
   </header>
   <main>
-    <div id="content"></div>
+    <div tabindex="0" id="content" aria-label="konten utama"></div>
   </main>
   <footer tabindex="0">
     <div class="mt-1">
