@@ -2,7 +2,7 @@ import Swal from 'sweetalert2';
 import RestaurantAPI from '../data/restaurantAPI';
 import UrlParser from '../routes/url-parser';
 import '../components/restaurantDetail';
-import LikeButtonInitiator from '../utils/like-button-initiator';
+import LikeButtonPresenter from '../utils/like-button-presenter';
 
 const Detail = {
   async render() {
@@ -37,7 +37,7 @@ const Detail = {
       restaurantContainer.innerHTML = '';
       restaurantContainer.appendChild(restaurantDetail);
 
-      LikeButtonInitiator.init({
+      LikeButtonPresenter.init({
         likeButtonContainer: document.querySelector('#likeButtonContainer'),
         restaurant: {
           id: restaurant.id,
