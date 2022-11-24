@@ -1,12 +1,16 @@
 import Swal from 'sweetalert2';
 import RestaurantAPI from '../data/restaurantAPI';
+import '../components/restaurantSkeleton';
 import '../components/restaurantList';
 
 const Explore = {
   async render() {
     return `
     <div class="jumbotron" tabindex="0">
-      <img src="./images/heros/hero-image_1.jpg" alt="">
+      <picture>
+        <source media="(max-width: 600px)" srcset="./images/hero-image-small.jpg">
+        <img src="./images/hero-image-large.jpg" class="skeleton" alt="eatme poster">
+      </picture>
       <div>
         <h2 class="logo">EatMe</h2>
         <p>Cari restoran favoritmu disini!</p>
@@ -17,7 +21,7 @@ const Explore = {
         <div class="explore mt-1">
           <h2 class="text-center fs-2" tabindex="0">Eksplor Restoran</h2>
           <div id="restaurants" class="mt-1">
-            <h3 class="text-center">Memuat Restoran</h3>
+            <restaurant-skeleton data-amount="10"></restaurant-skeleton>
           </div>
         </div>
       </div>

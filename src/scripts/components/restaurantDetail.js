@@ -11,7 +11,7 @@ class RestaurantDetail extends HTMLElement {
   render() {
     this.innerHTML = `
       <div class="card text-left shadow-none">
-        <img tabindex="0" class="card-img-lg" src="${CONFIG.API_IMAGE_URL.MEDIUM}/${this._restaurant.pictureId}" alt="foto restoran ${this._restaurant.name}">
+        <img tabindex="0" class="card-img-lg skeleton" src="${CONFIG.API_IMAGE_URL.MEDIUM}/${this._restaurant.pictureId}" alt="foto restoran ${this._restaurant.name}">
         <div class="card-content p-none">
           <p tabindex="0" class="mt-2"><i class="bx-fw bx bxs-map" aria-label="alamat"></i> ${this._restaurant.address} Kota ${this._restaurant.city}</p>
           <h2 tabindex="0" class="card-header mt-2 fs-2"><span aria-label="restoran ${this._restaurant.name}">${this._restaurant.name}</span> (<i class="bx-fw bx bxs-star bx-sm" aria-label="rating"></i>${this._restaurant.rating})</h2>
@@ -51,7 +51,7 @@ class RestaurantDetail extends HTMLElement {
                 <div class="card-content">
                   <h4 class="card-header">${review.name}</h4>
                   <small class="mt-2">${review.date}</small>
-                  <p class="mt-2">${review.review}<p>
+                  <p class="mt-2">${review.review}</p>
                 </div>
               </div>
             `).join('')}
@@ -86,7 +86,7 @@ class RestaurantDetail extends HTMLElement {
           <div class="card-content">
             <h4 class="card-header">${reviewData.name}</h4>
             <small class="mt-2">${reviewData.date}</small>
-            <p class="mt-2">${reviewData.review}<p>
+            <p class="mt-2">${reviewData.review}</p>
           </div>
         </div>
       `).join('');
@@ -99,7 +99,11 @@ class RestaurantDetail extends HTMLElement {
         name: event.target.name.value,
         review: event.target.review.value,
       };
-      addReview(value);
+
+      if (value.name.trim().length === 0 || value.review.trim().length === 0) {
+        Swal.fire('Error!', 'Harap isi nama dan review', 'error');
+      } else addReview(value);
+
       event.target.reset();
     });
   }

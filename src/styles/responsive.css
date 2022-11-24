@@ -6,7 +6,7 @@
   .container {
     padding: 0 3rem;
   }
-  .jumbotron img {
+  .jumbotron picture * {
     height: 400px;
   }
 }
@@ -16,7 +16,7 @@
     grid-template-columns: repeat(3, 1fr);
     gap: 20px 20px;
   }
-  .jumbotron img {
+  .jumbotron picture * {
     height: 700px;
   }
   .jumbotron h2 {
@@ -55,7 +55,7 @@
     list-style-type: none;
     text-decoration: none;
   }
-  .jumbotron img {
+  .jumbotron picture * {
     min-width: 1000px;
   }
   .container {
@@ -70,7 +70,7 @@
   #drawer {
     width: 30%;
   }
-  .jumbotron img {
+  .jumbotron picture * {
     height: 900px;
   }
 }
