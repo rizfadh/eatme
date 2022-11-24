@@ -3,6 +3,7 @@ import RestaurantAPI from '../data/restaurantAPI';
 import UrlParser from '../routes/url-parser';
 import '../components/restaurantDetail';
 import LikeButtonPresenter from '../utils/like-button-presenter';
+import RestaurantFavoriteIdb from '../data/restaurantFavoriteIdb';
 
 const Detail = {
   async render() {
@@ -39,6 +40,7 @@ const Detail = {
 
       LikeButtonPresenter.init({
         likeButtonContainer: document.querySelector('#likeButtonContainer'),
+        favoriteRestaurants: RestaurantFavoriteIdb,
         restaurant: {
           id: restaurant.id,
           name: restaurant.name,

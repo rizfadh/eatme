@@ -23,7 +23,7 @@ const Favorite = {
     if (restaurants.length === 0) {
       restaurantContainer.innerHTML = `
         <div tabindex="0" class="text-center">
-          <h3>Tidak ada restoran</h3>
+          <h3 class="no-restaurant">Tidak ada restoran</h3>
           <p>Pastikan kamu sudah memilih</p>
         </div>
       `;
