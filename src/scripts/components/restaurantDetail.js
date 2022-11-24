@@ -11,7 +11,7 @@ class RestaurantDetail extends HTMLElement {
   render() {
     this.innerHTML = `
       <div class="card text-left shadow-none">
-        <img tabindex="0" class="card-img-lg skeleton" src="${CONFIG.API_IMAGE_URL.MEDIUM}/${this._restaurant.pictureId}" alt="foto restoran ${this._restaurant.name}">
+        <img tabindex="0" class="card-img-lg" src="${CONFIG.API_IMAGE_URL.MEDIUM}/${this._restaurant.pictureId}" alt="foto restoran ${this._restaurant.name}">
         <div class="card-content p-none">
           <p tabindex="0" class="mt-2"><i class="bx-fw bx bxs-map" aria-label="alamat"></i> ${this._restaurant.address} Kota ${this._restaurant.city}</p>
           <h2 tabindex="0" class="card-header mt-2 fs-2"><span aria-label="restoran ${this._restaurant.name}">${this._restaurant.name}</span> (<i class="bx-fw bx bxs-star bx-sm" aria-label="rating"></i>${this._restaurant.rating})</h2>

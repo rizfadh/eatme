@@ -1,6 +1,5 @@
 import Swal from 'sweetalert2';
 import RestaurantAPI from '../data/restaurantAPI';
-import '../components/restaurantSkeleton';
 import '../components/restaurantList';
 
 const Explore = {
@@ -21,7 +20,7 @@ const Explore = {
         <div class="explore mt-1">
           <h2 class="text-center fs-2" tabindex="0">Eksplor Restoran</h2>
           <div id="restaurants" class="mt-1">
-            <restaurant-skeleton data-amount="10"></restaurant-skeleton>
+            <h3 class="text-center">Memuat Restoran</h3>
           </div>
         </div>
       </div>
